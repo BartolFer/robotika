@@ -682,7 +682,7 @@ if __name__ == '__main__' and not TESTING:
     
     qp = node.interpolate_q(Q, T_param);
     
-    qhc = node.ho_cook(Q + Q[0], v_max, a_max, 250);
+    qhc = node.ho_cook(qt, v_max, a_max, 250);
     
     for q in qt:
         node.moveRobot(q, 1); # one step every second
@@ -690,7 +690,7 @@ if __name__ == '__main__' and not TESTING:
     for q in qp:
         node.moveRobot(q, 0.1); # 10 steps every second (the same period as used in interpolate_q)
     pass
-    for q in qt:
+    for q in qhc:
         node.moveRobot(q, 1/250); # 250 steps every second (same as in ho_cook)
     pass
 pass
