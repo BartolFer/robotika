@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-TESTING = False
+TESTING = False;
 
 import sys
 import datetime
@@ -346,7 +346,7 @@ class RoboMath:
             t -= T;
         pass
         return q_all;
-    pass 
+    pass
 
     def maxLinear(self, P, T): return max(abs(P(0)), abs(P(T)));
     def maxQuadratic(self, P, T):
